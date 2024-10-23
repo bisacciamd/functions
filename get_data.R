@@ -10,7 +10,7 @@ redcap_mode <- function() {
     return("online")
   } else {
     cat("Invalid input. Please enter 'O' for offline or 'N' for online.\n")
-    return(redcap_mode())
+    return(mode())
   }
 }
 
