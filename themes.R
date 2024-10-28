@@ -1,3 +1,5 @@
+library(sysfonts)
+library(showtext)
 library(ggplot2)
 library(gt)
 
