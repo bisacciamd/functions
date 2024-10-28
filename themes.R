@@ -28,6 +28,16 @@ theme_bisaccia <- function() {
     )
 }
 
+# Function for adding color scale
+scale_color_ehj <- function() {
+  scale_color_manual(values = ehj_palette)
+}
+
+# Function for adding fill scale
+scale_fill_ehj <- function() {
+  scale_fill_manual(values = ehj_palette)
+}
+
 # theme for {gt} tables
 gt_theme_bisaccia <- function(gt_tbl) {
   n_rows <- nrow(gt_tbl$`_data`)
