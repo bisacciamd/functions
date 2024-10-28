@@ -1,20 +1,30 @@
+# Load necessary libraries
 library(sysfonts)
 library(showtext)
 library(ggplot2)
 library(gt)
 
-# theme for {ggplot} objects
+# Add Google font "Archivo Narrow" and enable it for rendering
+font_add_google("Archivo Narrow", "archivo-narrow")
+showtext_auto()
+
+# Define color palette
 ehj_palette <- c(
   "#5f3393", "#06b6b3",
   "#ad1122", "#000000",
   "#005694", "#fbb800", "#ef7918"
 )
 
+# Define ggplot theme with Archivo Narrow font
 theme_bisaccia <- function() {
-  theme_classic() +
+  theme_classic() %+replace%  # Use theme_classic as base
     theme(
       axis.title = element_text(family = "archivo-narrow"),
-      title = element_text(family = "archivo-narrow")
+      axis.text = element_text(family = "archivo-narrow"),
+      title = element_text(family = "archivo-narrow"),
+      plot.title = element_text(family = "archivo-narrow", size = 14, face = "bold"),
+      plot.subtitle = element_text(family = "archivo-narrow", size = 12),
+      plot.caption = element_text(family = "archivo-narrow", size = 10)
     )
 }
 
