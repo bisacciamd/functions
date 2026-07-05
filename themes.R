@@ -55,7 +55,7 @@ gt_theme_bisaccia <- function(gt_tbl) {
       style = cell_text(
         color = "#4a6d88",
         weight = "bold",
-        font = "Archivo Narrow"
+        font = google_font("Atkinson Hyperlegible")
       ),
       locations = cells_title(groups = "title")
     ) %>%
